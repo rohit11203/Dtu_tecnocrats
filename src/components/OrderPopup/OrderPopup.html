@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Popup</title>
+    <style>
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+        
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .popup-close-btn {
+            cursor: pointer;
+        }
+        
+        .popup-body input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .popup-body button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h1>Book Your Trip</h1>
+                <span class="popup-close-btn">&times;</span>
+            </div>
+            <div class="popup-body">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Address">
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const popupContainer = document.querySelector('.popup-container');
+        const popupCloseBtn = document.querySelector('.popup-close-btn');
+
+        popupCloseBtn.addEventListener('click', () => {
+            popupContainer.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
