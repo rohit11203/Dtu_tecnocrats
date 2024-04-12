@@ -53,7 +53,7 @@ const PlacesData = [
   },
   {
     img: Img6,
-    title: "Jaypur",
+    title: "Jaipur",
     location: "INDIA",
     description:
       "The Taj Mahal is an ivory-white marble mausoleum on the south bank of the river Yamuna in the Indian city of Agra.",
